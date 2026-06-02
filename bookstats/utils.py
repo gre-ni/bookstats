@@ -1,0 +1,1 @@
+# Useful hand-written functions
