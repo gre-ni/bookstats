@@ -1,5 +1,5 @@
 import csv
-from bookstats.config import RAW_DATA, CLEAN_DATA
+from bookstats.config import RAW_DATA, RAW_DATA_EN
 
 # Only keep books in English
 books = []
@@ -10,9 +10,7 @@ with open(RAW_DATA, "r") as file:
             books.append(book)
 
 
-# TODO: Further cleaning steps
-
-with open(CLEAN_DATA, "w") as file: 
+with open(RAW_DATA_EN, "w") as file: 
     writer = csv.DictWriter(file, fieldnames=books[0].keys())
     writer.writeheader()
     for book in books:
