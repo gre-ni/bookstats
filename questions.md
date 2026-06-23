@@ -14,3 +14,8 @@
 - Histogram of page count
 - Genres representation chart
 - Relationship between rating and page count
+
+### Ideas for the future:
+
+- Add gender
+- Add trigger warnings connected to books
