@@ -1,8 +1,8 @@
 import csv
-import re
 from bookstats.config import RAW_DATA, RAW_DATA_EN
 
 # Only keep books in English
+
 books = []
 with open(RAW_DATA, "r") as file: 
     reader = csv.DictReader(file)

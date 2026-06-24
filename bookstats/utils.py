@@ -1,1 +1,2 @@
-# Useful hand-written functions
+# Other misc useful functions
+

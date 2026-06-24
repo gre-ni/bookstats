@@ -1,3 +1,5 @@
+# Functions for publisher lookup/matching logic
+
 import requests
 
 # Idea: take publisher name, translate into searchable key, use the get request to get html
