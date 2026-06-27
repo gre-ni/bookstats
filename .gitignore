@@ -18,3 +18,4 @@ __pycache__/
 *.db
 
 CLAUDE.md
+log.md
