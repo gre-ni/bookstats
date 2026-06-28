@@ -17,5 +17,9 @@ __pycache__/
 # Database
 *.db
 
+# Claude
 CLAUDE.md
 log.md
+.claude
+
+scrap.ipynb
