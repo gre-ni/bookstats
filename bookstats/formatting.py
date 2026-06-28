@@ -8,3 +8,7 @@ def clean_whitespace(col: pd.Series) -> pd.Series:
     col = col.str.replace(r" {2,}"," ",regex=True)
     return col
 
+def clean_headers(df: pd.DataFrame) -> None:
+    """Cleaning header of passed in DataFrame, direct adjustment."""
+    df.columns = df.columns.str.strip()
+    df.columns = df.columns.str.replace(r" {2,}"," ",regex=True)
