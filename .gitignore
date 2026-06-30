@@ -16,6 +16,7 @@ __pycache__/
 
 # Database
 *.db
+data/
 
 # Claude
 CLAUDE.md
