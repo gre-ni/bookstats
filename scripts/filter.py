@@ -9,10 +9,11 @@ is_language = df["language_code"].isin(SUPPORTED_LANGUAGE_CODES)
 is_book = df["authors"] != "NOT A BOOK"
 is_not_set = ~df["title"].str.contains(r"#\d-\d", regex=True)
 
-# Filter by language:
-df = df[is_language]
-df = df[is_book]
-df = df[is_not_set]
+# Filter all:
+keep = is_language & is_book & is_not_set
+df = df[keep]
+
+df = df.reset_index(drop=True)
 
 
 df.to_csv(FILTERED_DATA, index=False)
