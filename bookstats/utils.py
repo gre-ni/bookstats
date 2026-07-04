@@ -1,2 +1,1 @@
 SUPPORTED_LANGUAGE_CODES = ["en-US", "eng", "en-GB", "en-CA"]
-

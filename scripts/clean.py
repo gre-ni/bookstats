@@ -1,4 +1,5 @@
 from bookstats.formatting import clean_whitespace, clean_headers
+from bookstats.publishers import publisher_dedup, PUBLISHER_OVERRIDES
 from bookstats.config import FILTERED_DATA, CLEAN_DATA
 import pandas as pd
 import numpy as np
@@ -22,6 +23,10 @@ df["num_pages"] = df["num_pages"].replace(0, np.nan)
 # 0 to NaN on ratings_count with non-zero average:
 has_unrated_avg = (df["average_rating"] != 0) & (df["ratings_count"] == 0)
 df["ratings_count"] = df["ratings_count"].mask(has_unrated_avg)
+
+# Publisher-specific cleanup, generic and targeted:
+df["publisher"] = publisher_dedup(df["publisher"])
+df["publisher"] = df["publisher"].replace(PUBLISHER_OVERRIDES)
 
 df.to_csv(CLEAN_DATA, index=False)
 
