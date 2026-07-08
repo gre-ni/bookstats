@@ -24,15 +24,16 @@ CREATE TABLE "publishers" (
 
 CREATE TABLE "series" (
     "id" INTEGER,
-    "name" TEXT NOT NULL,
+    "name" TEXT NOT NULL UNIQUE,
     "author_id" INTEGER,
     PRIMARY KEY("id"),
-    FOREIGN KEY("author_id") REFERENCES "authors"("id")
+    FOREIGN KEY("author_id") REFERENCES "authors"("id"),
+    UNIQUE("name","author_id")
 );
 
 CREATE TABLE "authors" (
     "id" INTEGER,
-    "name" TEXT NOT NULL,
+    "name" TEXT NOT NULL UNIQUE,
     PRIMARY KEY("id")
 );
 
