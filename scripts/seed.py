@@ -1,12 +1,15 @@
 import sqlite3
-import csv
-from pathlib import Path 
+import pandas as pd
+from bookstats.config import DB_PATH, SCHEMA, TRANSFORM, MODELLED_DATA
 
-DB_PATH = Path(__file__).parent.parent / "data"
-con = sqlite3.connect(DB_PATH) 
 
-with open("../data/raw/books.csv", "r") as f:
-    db = con.cursor()
-    db.execute(""""
-               
-               """)
+with sqlite3.connect(DB_PATH) as con:
+
+    pd.read_csv(MODELLED_DATA).to_sql("staging", con, index=False, if_exists='replace')
+
+    con.executescript(SCHEMA.read_text())
+    con.executescript(TRANSFORM.read_text())
+
+    con.execute("DROP TABLE staging")
+
+con.close()
