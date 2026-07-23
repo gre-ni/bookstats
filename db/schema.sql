@@ -2,7 +2,7 @@ CREATE TABLE "books" (
     "id" INTEGER,
     "title" TEXT NOT NULL,
     "publisher_id" INTEGER NOT NULL,
-    "publication_date" NUMERIC,
+    "publication_date" TEXT,
     "series_id" INTEGER,
     "series_part" INTEGER,
     "isbn" TEXT UNIQUE,
@@ -25,10 +25,7 @@ CREATE TABLE "publishers" (
 CREATE TABLE "series" (
     "id" INTEGER,
     "name" TEXT NOT NULL UNIQUE,
-    "author_id" INTEGER,
-    PRIMARY KEY("id"),
-    FOREIGN KEY("author_id") REFERENCES "authors"("id"),
-    UNIQUE("name","author_id")
+    PRIMARY KEY("id")
 );
 
 CREATE TABLE "authors" (
