@@ -28,6 +28,9 @@ df["ratings_count"] = df["ratings_count"].mask(has_unrated_avg)
 df["publisher"] = publisher_dedup(df["publisher"])
 df["publisher"] = df["publisher"].replace(PUBLISHER_OVERRIDES)
 
+# Change of date format to ISO
+df["publication_date"] = pd.to_datetime(df["publication_date"], format="%m/%d/%Y", errors="coerce").dt.strftime("%Y-%m-%d")
+
 df.to_csv(CLEAN_DATA, index=False)
 
 
