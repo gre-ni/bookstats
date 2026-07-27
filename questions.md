@@ -5,23 +5,21 @@
 3. Relationship between rating and page count
 4. Highest rated classics?
 5. Does number of ratings influence the outcome? Hypothesis: More widely popular book tends to attract people outside of that niche, therefore has harsher critics
-6. Relationship between genre and rating
+6. Relationship between rating and publication date
 
 ### To visualise:
 
 - Which publishers are most represented
 - Histogram of years/periods represented
 - Histogram of page count
-- Genres representation chart
 - Relationship between rating and page count
 
-### Ideas for the future:
+### Planned future ideas:
 
-- Add gender
-- Add trigger warnings connected to books
+**Questions that may need more scraping/expanding my dataset**
 
-### Questions that may need more scraping/expanding my dataset
-
+- Highest rated classics?
+- Do genre books (fantasy, romance) have higher ratings than general fiction?
 - Which genre of books are likely to win a Booker Prize
 - Do Booker Prize winners tend to have a lower rating?
 - Does translated fiction tend to have lower rating? (in English-speaking countries versus their original language rating: is there a language where this rating difference is lowest?)
