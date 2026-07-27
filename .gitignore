@@ -21,6 +21,7 @@ data/
 # Claude
 CLAUDE.md
 log.md
+log-highlights.md
 .claude
 
 scrap.ipynb
