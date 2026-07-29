@@ -1,6 +1,6 @@
 # bookstats
 
-A relational database built from an 11k-row Goodreads book dataset, produced by a filter → clean → normalise → seed pipeline. First portfolio project for a data analyst career switch.
+A relational database built from an 11k-row Goodreads book dataset, produced by a filter → clean → normalise → seed pipeline.
 
 **Status:** ETL/ELT and schema design are done, DB is seeded and FK-enforced. Analysis and visualisation against [`questions.md`](questions.md) is next (see [What's next](#whats-next)).
 
